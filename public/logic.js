@@ -12,7 +12,6 @@ function iterate() {
   count++;
   var canvas = document.getElementById('canvas');
   canvas.style.setProperty('--movement', count);
-    // canvas.style.setProperty('--confettiColor', 'rgba(20,20,20)');
   window.requestAnimationFrame(iterate);
 }
 

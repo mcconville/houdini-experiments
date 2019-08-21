@@ -1,9 +1,18 @@
 .bar {
     background-image: paint(confettiarea);
-  --triger: hello;
-  --confetti: '';
-  --shifts: '';
   --confettiColor:#E1297D;
+  --confettiLimit:1000;
+  --confettiSize:8;
+  --movement:0;
+  width: 500px;
+  height: 500px;
+}
+
+.bar2 {
+    background-image: paint(confettiarea);
+  --confettiColor:#F5C300;
+  --confettiLimit:1000;
+  --confettiSize:8;
   --movement:0;
   width: 500px;
   height: 500px;
