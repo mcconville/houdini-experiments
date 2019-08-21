@@ -6,13 +6,14 @@ class ConfettiPainter {
   static get inputProperties() {
     return [
       '--limit',
-      '--color',
+      '--confettiColor',
       '--confettiSize',
       '--movement'
     ];
   }
 
   count = 0;
+  confettiColor = '#4BB066';
   confetti = [];
   shifts = [];
 
@@ -20,9 +21,10 @@ class ConfettiPainter {
 
     this.t1 = new Date();
 
-    this.confettiSet = properties.get('--confetti');
     this.count = properties.get('--count');
 
+    console.log(properties.get('--confettiColor'))
+    this.confettiColor = properties.get('--confettiColor');
     this.t1 = new Date();
 
     this.CONFETTILIMIT = 1000;
@@ -52,7 +54,7 @@ class ConfettiPainter {
       var confetto = this.confetti[i];
 
       // ctx.fillStyle = `rgba(${~~(Math.sin(i)*255)},${~~(Math.cos(i)*255)},${~~(Math.tan(i)*255)},${Math.random()})`;
-      ctx.fillStyle = `rgba(75, 176, 102)`;
+      ctx.fillStyle = this.confettiColor;
       ctx.fillRect(confetto.x, confetto.y, this.CONFETTISIZE, this.CONFETTISIZE );
 
       var delta = this.shifts[i];

@@ -1,0 +1,10 @@
+.bar {
+    background-image: paint(confettiarea);
+  --triger: hello;
+  --confetti: '';
+  --shifts: '';
+  --confettiColor:#E1297D;
+  --movement:0;
+  width: 500px;
+  height: 500px;
+}

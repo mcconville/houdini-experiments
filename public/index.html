@@ -1,48 +1,10 @@
 <!doctype html>
 <html>
-
 <head>
-  <style>
-    textarea {
-      background-image: paint(confettiarea);
-    }
-
-    .bar {
-      --triger: hello;
-      --confetti: '';
-      --shifts: '';
-      --color:'';
-      --movement:0;
-      width: 500px;
-      height: 500px;
-    }
-  </style>
+  <link rel="stylesheet" href="./confetti.css">
 </head>
-
 <body onload="init()">
-  <textarea class="bar" id="canvas"></textarea>
+  <div class="bar" id="canvas"></div>
 </body>
-<script>
-  if (location.protocol === 'http:' && location.hostname !== 'localhost')
-    location.protocol = 'https:';
-  if ('paintWorklet' in CSS) {
-    CSS.paintWorklet.addModule('confetti.js');
-  } else {
-    document.body.innerHTML = 'You need support for <a href="https://drafts.css-houdini.org/css-paint-api/">CSS Paint API</a> to view this demo :(';
-  }
-
-  var count=0;
-
-  function iterate() {
-    count++;
-    var canvas = document.getElementById('canvas');
-    canvas.style.setProperty('--movement', count);
-    window.requestAnimationFrame(iterate);
-  }
-
-  function init() {
-    iterate();
-  }
-</script>
-
+<script src="./logic.js "></script>
 </html>
