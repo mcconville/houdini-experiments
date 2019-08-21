@@ -27,8 +27,8 @@ class ConfettiPainter {
     this.confettiColor = properties.get('--confettiColor');
     this.confettiLimit = limit;
     this.confettiSize = size;
-    this.BOUNDARY = 500;
-
+    this.width = geom.width;
+    this.height = geom.height;
     this.draw(ctx);
   }
 
@@ -54,10 +54,10 @@ class ConfettiPainter {
       ctx.fillRect(confetto.x, confetto.y, this.confettiSize, this.confettiSize );
 
       var delta = this.shifts[i];
-      confetto.x = (confetto.x + delta.x) % this.BOUNDARY;
-      if (confetto.x < 0) confetto.x += this.BOUNDARY;
-      confetto.y = (confetto.y + delta.y) % this.BOUNDARY;
-      if (confetto.y < 0) confetto.y += this.BOUNDARY;
+      confetto.x = (confetto.x + delta.x) % this.width;
+      if (confetto.x < 0) confetto.x += this.width;
+      confetto.y = (confetto.y + delta.y) % this.height;
+      if (confetto.y < 0) confetto.y += this.height;
     }
   }
 }
