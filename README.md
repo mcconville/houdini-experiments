@@ -40,7 +40,7 @@ server starting on http://localhost:3000
 
 This app is really basic - you should see a resizeable text area with random red colored confetti floing through it. This is CSS Houdini at work. You can stretch the box, and the conffeti should continue to fill it.
 
-![screenshot](conffeti.png)
+![screenshot](confetti.png)
 
 #### Overview
 
