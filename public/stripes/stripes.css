@@ -1,0 +1,8 @@
+.stripes {
+    background-image: paint(stripes);
+  --stripeColor:#E1297D;
+  --stripeGap:6;
+  --stripeWidth:2;
+  width: 200px;
+  height: 300px;
+}
