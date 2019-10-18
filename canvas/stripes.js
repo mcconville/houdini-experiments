@@ -1,6 +1,6 @@
 function drawStripe(context, startx, starty, endx, endy) {
   context.beginPath();
-  context.strokeStyle = "white";
+  context.strokeStyle = "blue";
   context.lineWidth = 2;
   context.lineCap = 'round';
   context.moveTo(startx, starty);
@@ -69,3 +69,9 @@ function fillStripes(context, x, y, width, height) {
     } while (startx + gap < width + x)
   }
 }
+
+var canvas = document.getElementById('cvs');
+
+let x = canvas.getContext('2d');
+
+fillStripes(x, 10, 10, 200, 300)
